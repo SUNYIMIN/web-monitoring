@@ -1,0 +1,11 @@
+node_modules
+dist
+bower_components
+.happypack
+uploads
+npm-debug.log
+yarn-error.log
+package-lock.json
+.vscode
+router/proxy.conf
+src-ts/client/routes/proxy.conf
