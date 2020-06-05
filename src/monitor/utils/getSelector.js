@@ -15,7 +15,6 @@ function getSelectors(path) {
 
 
 export default function (path) {
-   console.log(path)
    if(Array.isArray(path)) {
      return getSelectors(path)
    }

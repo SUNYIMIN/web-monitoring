@@ -4,7 +4,6 @@ import getSelector from '../utils/getSelector'
 export function injectError() {
   //监听全局未捕获的错误
   window.addEventListener('error', (event) => {
-      console.log('event', event)
       let lastEvent = getLastEvent()  //获取最后一个元素操作的事件对象
       let log = {
         kind: 'stability',//监控指标的大类
