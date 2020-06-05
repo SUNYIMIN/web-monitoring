@@ -12,17 +12,17 @@ export function injectError() {
         message: event.message, //报错的信息
         filename: event.filename,//哪个文件报错了
         position: `${event.lineno}:${event.colno}`, //报错的文件位置
-        stack: gitLine(event.error.stack), //报错的栈信息
+        stack: getLine(event.error.stack), //报错的栈信息
         selector: lastEvent ? getSelector(lastEvent.path) : ''//代表最后一个操作的元素
       }
 
       console.log(log)
-
+      console.log(11111)
   }, true)
 }
 
 
 
-function gitLine(stack) {
+function getLine(stack) {
   return stack.split('\n').slice(1).map(item => item.replace(/^\s+at\s+/g, "")).join('^')
 }
