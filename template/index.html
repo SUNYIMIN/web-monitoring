@@ -10,6 +10,10 @@
     <div class="content">
         <input id="errorBtn" type="button" value="点击抛出错误" onclick="errorClick()" />
         <input id="promiseBtn" type="button" value="点击抛出Promise错误" onclick="promiseErrorClick()" />
+
+        <input id="successBtnRequest" type="button" value="请求成功" onclick="success()" />
+        <input id="errorBtnRequest" type="button" value="请求失败" onclick="error()" />
+
     </div>
 </div>
 <script>
@@ -24,8 +28,22 @@
           console.log(result);
      })
    }
+
+   function success() {
+     var xhr = new XMLHttpRequest
+     xhr.open('GET', '/success', true)
+     xhr.responseType = 'json'
+     xhr.onload = function () {
+       console.log(xhr.response)
+     }
+     xhr.send()
+   }
+
+   function error () {
+
+   }
 </script>
-<script src="some.js">
+<!-- <script src="some.js"> -->
 
 </script>
 </body>

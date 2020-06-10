@@ -16,7 +16,7 @@ module.exports = {
             router.get('/success', function (req, res) {
                 res.json({ id: 1 });//200
             });
-            router.post('/error', function (req, res) {
+            router.get('/error', function (req, res) {
                 res.sendStatus(500);//500
             });
         }
